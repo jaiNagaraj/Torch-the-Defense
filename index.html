@@ -1,0 +1,2360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Torch the Defense</title>
+
+  <!-- Basic Styling -->
+  <!-- ****  CSS Feature submission **** -->
+  <!-- Created responsive background image for website -->
+  <style>
+	  html, body
+	  {
+	  	height: 100%;
+	  	width: 100%;
+	  	background: url(XO.jpg) no-repeat center center fixed; 
+	  	-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
+	 }
+	
+	#coverageSelect
+	{
+		margin: auto;
+		width: 100%;
+	}
+	
+	.cover
+	{
+		width: 80%;
+		margin: auto;
+		background: gray;
+	}
+  </style>
+	
+	<!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!--jQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+	
+<body>
+  <!-- 					*********** HOME DIV ***********			         -->
+  <div id="home" class="py-3">
+    <div class="container my-3">
+		<!-- ****  HTML Feature submission **** -->
+		<!-- Header element -->
+	    <h1 class="text-center text-light">Torch the Defense!</h1>
+		<!-- ****  Typography Feature submission 1/4 **** -->
+		<!-- Light Text -->
+	    <p class="text-center text-light"">Click on each of the buttons below to learn about basic defensive schemes and their weaknesses.</p>
+    </div>
+    <!-- ****  Bootstrap Feature submission **** -->
+	<!-- Created button group for tab navigation -->
+    <div class="btn-group" id="coverageSelect">
+		<!-- ****  HTML Feature submission **** -->
+		<!-- usage of onclick attribute for functions, repeated this multiple times -->
+	    <button type="button" class="btn btn-secondary" onclick="displayCoverOne()">Cover 1</button>
+	    <button type="button" class="btn btn-secondary" onclick="displayCoverTwo()">Cover 2</button>
+	    <button type="button" class="btn btn-secondary" onclick="displayCoverThree()">Cover 3</button>
+	    <button type="button" class="btn btn-secondary" onclick="displayCoverFour()">Cover 4</button>
+		<button type="button" class="btn btn-secondary" onclick="displayQuiz()">Quiz!</button>
+    </div>
+
+	  <hr>
+  </div>
+
+	<!-- 					*********** COVER ONE DIV ***********			         -->
+
+	<!-- ****  Bootstrap Feature submission **** -->
+	<!-- Created responsive container with padding class 2 -->
+	<div class="container cover py-2" id="coverOne">
+		<!-- ****  HTML Feature submission **** -->
+		<!-- Small element -->
+		<small class="display-4 m-2 text-center" style="color: beige;">Cover One</small>
+		<!-- ****  Typography Feature submission 2/4 **** -->
+		<!-- Yellow (Warning) Text -->
+		<p id="explain1" class="mx-2 px-1 my-2 text-warning">
+			Cover One, also known as Man Free, is a defensive scheme where one safety is dropped back into coverage while every other defender plays man coverage. <br><br>
+			There is usually an extra defender remaining, who can either blitz or drop back to provide extra protection against slants and other short crossing routes.<br><br>
+			Hover over each of the defenders below to learn more about each position and to highlight the offensive position they deal with:
+		</p>
+
+		<!-- ****  HTML Feature submission **** -->
+		<!-- Horizontal rule (used again below the next div) -->
+		<hr>
+
+		<!-- List of positions for Cover One -->	
+		<div style="max-height: 23em">
+			<!-- ****  CSS Feature submission **** -->
+			<!-- Round borders -->
+			<p id="cover1FS" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 40%; background: red;" class="text-center text-light">
+				FS
+			</p>
+			<!-- ****  CSS Feature submission **** -->
+			<!-- Relative position with relative measurements (%, em) -->
+			<p id="cover1SS" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 60%; background: red;" class="text-center text-light">
+				SS
+			</p>
+			<p id="cover1W" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 35%; top: 2.5em; background: red;" class="text-center text-light">
+				W
+			</p>
+			<p id="cover1M" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 50%; bottom: 0em; background: red;" class="text-center text-light">
+				M
+			</p>
+			<p id="cover1C1" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 3%; bottom: 3em; background: red;" class="text-center text-light">
+				C
+			</p>
+			<p id="cover1S" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 70%; bottom: 1em; background: red;" class="text-center text-light">
+				S
+			</p>
+			<p id="cover1C2" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 87%; bottom: 5em; background: red;" class="text-center text-light">
+				C
+			</p>
+			<p id="cover1E1" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 20%; bottom: 6.5em; background: red;" class="text-center text-light">
+				E
+			</p>
+			<p id="cover1T" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 30%; bottom: 9.25em; background: red;" class="text-center text-light">
+				T
+			</p>
+			<p id="cover1N" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 45%; bottom: 12em; background: red;" class="text-center text-light">
+				N
+			</p>
+			<p id="cover1E2" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 57%; bottom: 14.75em; background: red;" class="text-center text-light">
+				E
+			</p>
+
+		<!-- Offensive Positions -->
+			<p id="cover1X" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 3%; bottom: 14.75em; background: blue;" class="text-center text-light">
+				X
+			</p>
+			<p id="cover1LT" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 24%; bottom: 17.5em; background: blue;" class="text-center text-light">
+				LT
+			</p>
+			<p id="cover1LG" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 34%; bottom: 20.25em; background: blue;" class="text-center text-light">
+				LG
+			</p>
+			<p id="cover1Center" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 44%; bottom: 23em; background: blue;" class="text-center text-light">
+				Ce
+			</p>
+			<p id="cover1RG" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 54%; bottom: 25.75em; background: blue;" class="text-center text-light">
+				RG
+			</p>
+			<p id="cover1RT" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 64%; bottom: 28.5em; background: blue;" class="text-center text-light">
+				RT
+			</p>
+			<p id="cover1Y" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 74%; bottom: 31.25em; background: blue;" class="text-center text-light">
+				Y
+			</p>
+			<p id="cover1Z" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 90%; bottom: 34em; background: blue;" class="text-center text-light">
+				Z
+			</p>
+			<p id="cover1QB" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 44%; bottom: 34.75em; background: blue;" class="text-center text-light">
+				QB
+			</p>
+			<p id="cover1FB" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 34%; bottom: 34.75em; background: blue;" class="text-center text-light">
+				FB
+			</p>
+			<p id="cover1HB" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 58%; bottom: 36.75em; background: blue;" class="text-center text-light">
+				HB
+			</p>
+		</div>
+
+		<!-- ****  Typography Feature submission 3/4 **** -->
+		<!-- Light blue (Info) Text -->
+		<p id="defenderInfo1" class="text-info text-center p-4" style="display: none; background: white; border: 2px solid black; border-radius: 10px; max-width: 70%; pointer-events:none;">
+			gabbadeegook
+		</p>
+
+		<hr>
+		<div class="container">
+			<!-- ****  Bootstrap Feature submission **** -->
+			<!-- Created buttons with outline -->
+			<button id="backBtn1" class="btn btn-md btn-outline-dark" disabled>Show defense</button>
+			<button id="nextBtn1" class="btn btn-md btn-outline-dark pull-right" style="float: right;">Show weakness</button>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- 					*********** COVER TWO DIV ***********			         -->
+	<div class="container cover py-2" id="coverTwo" style="display: none;">
+		<small class="display-4 m-2 text-center" style="color: beige;">Cover Two</small>
+		<p id="explain2" class="mx-2 px-1 my-2 text-warning">
+			Cover Two is more of a "zone" defense: a defense where players are assigned to an area of the field to cover. The safeties will be positioned just outside the hashes about 15 yards back from the line of scrimmage, and they each monitor their area from the middle of the field to their respective sideline. <br><br>
+			The linebackers are tasked with monitoring the part of the field 5-12 yards back from the line of scrimmage in a formation called Tampa 2. They cover three zones among the three of them.<br><br>
+			Hover over each of the defenders below to learn more about each position and their zone:
+		</p>
+
+		<hr>
+
+		<!-- List of positions for Cover Two -->	
+		<div style="max-height: 23em">
+			<p id="cover2FS" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 30%; top: 2.6em; background: red;" class="text-center text-light">
+				FS
+			</p>
+			<p id="cover2SS" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 60%; background: red;" class="text-center text-light">
+				SS
+			</p>
+			<p id="cover2W" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 32%; top: 4.5em; background: red;" class="text-center text-light">
+				W
+			</p>
+			<p id="cover2M" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 50%; bottom: -1.5em; background: red;" class="text-center text-light">
+				M
+			</p>
+			<p id="cover2C1" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 3%; bottom: -0.5em; background: red;" class="text-center text-light">
+				C
+			</p>
+			<p id="cover2S" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 72%; bottom: 2.5em; background: red;" class="text-center text-light">
+				S
+			</p>
+			<p id="cover2C2" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 87%; bottom: 5em; background: red;" class="text-center text-light">
+				C
+			</p>
+			<p id="cover2E1" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 25%; bottom: 6.5em; background: red;" class="text-center text-light">
+				E
+			</p>
+			<p id="cover2T" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 38%; bottom: 9.25em; background: red;" class="text-center text-light">
+				T
+			</p>
+			<p id="cover2N" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 50%; bottom: 12em; background: red;" class="text-center text-light">
+				N
+			</p>
+			<p id="cover2E2" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 63%; bottom: 14.75em; background: red;" class="text-center text-light">
+				E
+			</p>
+
+		<!-- Offensive Positions -->
+			<p id="cover2X" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 3%; bottom: 14.75em; background: blue;" class="text-center text-light">
+				X
+			</p>
+			<p id="cover2LT" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 24%; bottom: 17.5em; background: blue;" class="text-center text-light">
+				LT
+			</p>
+			<p id="cover2LG" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 34%; bottom: 20.25em; background: blue;" class="text-center text-light">
+				LG
+			</p>
+			<p id="cover2Center" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 44%; bottom: 23em; background: blue;" class="text-center text-light">
+				Ce
+			</p>
+			<p id="cover2RG" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 54%; bottom: 25.75em; background: blue;" class="text-center text-light">
+				RG
+			</p>
+			<p id="cover2RT" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 64%; bottom: 28.5em; background: blue;" class="text-center text-light">
+				RT
+			</p>
+			<p id="cover2Y" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 79%; bottom: 31.25em; background: blue;" class="text-center text-light">
+				Y
+			</p>
+			<p id="cover2Z" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 90%; bottom: 34em; background: blue;" class="text-center text-light">
+				Z
+			</p>
+			<p id="cover2QB" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 44%; bottom: 34.75em; background: blue;" class="text-center text-light">
+				QB
+			</p>
+			<p id="cover2FB" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 34%; bottom: 34.75em; background: blue;" class="text-center text-light">
+				FB
+			</p>
+			<p id="cover2HB" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 58%; bottom: 36.75em; background: blue;" class="text-center text-light">
+				HB
+			</p>
+		</div>
+
+		
+		<p id="defenderInfo2" class="text-info text-center p-4" style="display: none; background: white; border: 2px solid black; border-radius: 10px; max-width: 70%; pointer-events:none;">
+			gabbadeegook
+		</p>
+
+		<hr>
+		<div class="container">
+			<button id="backBtn2" class="btn btn-md btn-outline-dark" disabled>Show defense</button>
+			<button id="nextBtn2" class="btn btn-md btn-outline-dark pull-right" style="float: right;">Show weakness</button>
+		</div>
+	</div>
+
+
+
+
+	<!-- 					*********** COVER THREE DIV ***********			         -->
+	<div class="container cover py-2" id="coverThree" style="display: none;">
+		<small class="display-4 m-2 text-center" style="color: beige;">Cover Three</small>
+		<p id="explain3" class="mx-2 px-1 my-2 text-warning">
+			Cover Three is a zone defense which aims to solve the middle-of-the-field vulnerability that Cover 2 presents. One safety drops back to guard the middle about 15 yards off the line of scrimmage, while this time, the corners play off man coverage and sink back about 12 yards off the line of scrimmage. They guard the sidelines, but if a receiver runs a streak route and passes them, the corners switch to man coverage and follow that receiver.<br><br>
+			The linebackers and strong safety, meanwhile, split the field horizontally into four parts, with each defender being assigned a part to cover. This makes it hard for offenses to run short completion routes over the middle. <br><br>
+			Hover over each of the defenders below to learn more about each position and their zone:
+		</p>
+
+		<hr>
+
+		<!-- List of positions for Cover Three -->	
+		<div style="max-height: 23em">
+			<p id="cover3FS" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 44%; top: 2.6em; background: red;" class="text-center text-light">
+				FS
+			</p>
+			<p id="cover3SS" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 70%; bottom: -7.5em; background: red;" class="text-center text-light">
+				SS
+			</p>
+			<p id="cover3W" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 22%; top: 4.5em; background: red;" class="text-center text-light">
+				W
+			</p>
+			<p id="cover3M" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 39%; bottom: -1em; background: red;" class="text-center text-light">
+				M
+			</p>
+			<p id="cover3C1" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 3%; bottom: 4.5em; background: red;" class="text-center text-light">
+				C
+			</p>
+			<p id="cover3S" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 55%; bottom: 5em; background: red;" class="text-center text-light">
+				S
+			</p>
+			<p id="cover3C2" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 87%; bottom: 10em; background: red;" class="text-center text-light">
+				C
+			</p>
+			<p id="cover3E1" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 25%; bottom: 6.5em; background: red;" class="text-center text-light">
+				E
+			</p>
+			<p id="cover3T" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 38%; bottom: 9.25em; background: red;" class="text-center text-light">
+				T
+			</p>
+			<p id="cover3N" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 50%; bottom: 12em; background: red;" class="text-center text-light">
+				N
+			</p>
+			<p id="cover3E2" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 63%; bottom: 14.75em; background: red;" class="text-center text-light">
+				E
+			</p>
+
+		<!-- Offensive Positions -->
+			<p id="cover3X" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 3%; bottom: 14.75em; background: blue;" class="text-center text-light">
+				X
+			</p>
+			<p id="cover3LT" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 24%; bottom: 17.5em; background: blue;" class="text-center text-light">
+				LT
+			</p>
+			<p id="cover3LG" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 34%; bottom: 20.25em; background: blue;" class="text-center text-light">
+				LG
+			</p>
+			<p id="cover3Center" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 44%; bottom: 23em; background: blue;" class="text-center text-light">
+				Ce
+			</p>
+			<p id="cover3RG" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 54%; bottom: 25.75em; background: blue;" class="text-center text-light">
+				RG
+			</p>
+			<p id="cover3RT" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 64%; bottom: 28.5em; background: blue;" class="text-center text-light">
+				RT
+			</p>
+			<p id="cover3Y" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 79%; bottom: 31.25em; background: blue;" class="text-center text-light">
+				Y
+			</p>
+			<p id="cover3Z" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 90%; bottom: 34em; background: blue;" class="text-center text-light">
+				Z
+			</p>
+			<p id="cover3QB" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 44%; bottom: 34.75em; background: blue;" class="text-center text-light">
+				QB
+			</p>
+			<p id="cover3FB" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 34%; bottom: 34.75em; background: blue;" class="text-center text-light">
+				FB
+			</p>
+			<p id="cover3HB" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 58%; bottom: 36.75em; background: blue;" class="text-center text-light">
+				HB
+			</p>
+		</div>
+
+		
+		<p id="defenderInfo3" class="text-info text-center p-4" style="display: none; background: white; border: 2px solid black; border-radius: 10px; max-width: 70%; pointer-events:none;">
+			gabbadeegook
+		</p>
+
+		<hr>
+		<div class="container">
+			<button id="backBtn3" class="btn btn-md btn-outline-dark" disabled>Show defense</button>
+			<button id="nextBtn3" class="btn btn-md btn-outline-dark pull-right" style="float: right;">Show weakness</button>
+		</div>
+	</div>
+
+
+
+
+
+		<!-- 					*********** COVER FOUR DIV ***********			         -->
+	<div class="container cover py-2" id="coverFour" style="display: none;">
+		<small class="display-4 m-2 text-center" style="color: beige;">Cover Four</small>
+		<p id="explain4" class="mx-2 px-1 my-2 text-warning">
+			Cover Four is a zone defense that completely ruins a pass-happy offense's day. With four deep defenders (two corners on the oustide and two safeties <em>within</em> the hashes) and three linebackers underneath, Cover Four aims to eliminate the deep pass.<br><br>
+			This defense is growing increasingly common in the NFL to counter the increase of pass-attack offenses. You'll also find this defense common during last-minute miracle-drive situations for the offense since the last thing the defense wants to do in that moment is to give up a long-bomb touchdown.<br><br>
+			Hover over each of the defenders below to learn more about each position and their zone:
+		</p>
+
+		<hr>
+
+		<!-- List of positions for Cover Four -->	
+		<div style="max-height: 23em">
+			<p id="cover4FS" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 34%; top: 2.6em; background: red;" class="text-center text-light">
+				FS
+			</p>
+			<p id="cover4SS" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 55%; bottom: 0.1em; background: red;" class="text-center text-light">
+				SS
+			</p>
+			<p id="cover4W" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 22%; top: 4.5em; background: red;" class="text-center text-light">
+				W
+			</p>
+			<p id="cover4M" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 39%; bottom: -1em; background: red;" class="text-center text-light">
+				M
+			</p>
+			<p id="cover4C1" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 3%; bottom: 4.5em; background: red;" class="text-center text-light">
+				C
+			</p>
+			<p id="cover4S" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 55%; bottom: 5em; background: red;" class="text-center text-light">
+				S
+			</p>
+			<p id="cover4C2" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 87%; bottom: 10em; background: red;" class="text-center text-light">
+				C
+			</p>
+			<p id="cover4E1" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 25%; bottom: 6.5em; background: red;" class="text-center text-light">
+				E
+			</p>
+			<p id="cover4T" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 38%; bottom: 9.25em; background: red;" class="text-center text-light">
+				T
+			</p>
+			<p id="cover4N" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 50%; bottom: 12em; background: red;" class="text-center text-light">
+				N
+			</p>
+			<p id="cover4E2" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 63%; bottom: 14.75em; background: red;" class="text-center text-light">
+				E
+			</p>
+
+		<!-- Offensive Positions -->
+			<p id="cover4X" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 3%; bottom: 14.75em; background: blue;" class="text-center text-light">
+				X
+			</p>
+			<p id="cover4LT" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 24%; bottom: 17.5em; background: blue;" class="text-center text-light">
+				LT
+			</p>
+			<p id="cover4LG" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 34%; bottom: 20.25em; background: blue;" class="text-center text-light">
+				LG
+			</p>
+			<p id="cover4Center" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 44%; bottom: 23em; background: blue;" class="text-center text-light">
+				Ce
+			</p>
+			<p id="cover4RG" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 54%; bottom: 25.75em; background: blue;" class="text-center text-light">
+				RG
+			</p>
+			<p id="cover4RT" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 64%; bottom: 28.5em; background: blue;" class="text-center text-light">
+				RT
+			</p>
+			<p id="cover4Y" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 79%; bottom: 31.25em; background: blue;" class="text-center text-light">
+				Y
+			</p>
+			<p id="cover4Z" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 90%; bottom: 34em; background: blue;" class="text-center text-light">
+				Z
+			</p>
+			<p id="cover4QB" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 44%; bottom: 34.75em; background: blue;" class="text-center text-light">
+				QB
+			</p>
+			<p id="cover4FB" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 34%; bottom: 34.75em; background: blue;" class="text-center text-light">
+				FB
+			</p>
+			<p id="cover4HB" style="font-weight: bolder; border: 2px solid blue; border-radius: 15px; width: 10%; position: relative; left: 58%; bottom: 36.75em; background: blue;" class="text-center text-light">
+				HB
+			</p>
+		</div>
+
+		
+		<p id="defenderInfo4" class="text-info text-center p-4" style="display: none; background: white; border: 2px solid black; border-radius: 10px; max-width: 70%; pointer-events:none;">
+			gabbadeegook
+		</p>
+
+		<hr>
+		<div class="container">
+			<button id="backBtn4" class="btn btn-md btn-outline-dark" disabled>Show defense</button>
+			<button id="nextBtn4" class="btn btn-md btn-outline-dark pull-right" style="float: right;">Show weakness</button>
+		</div>
+	</div>
+
+		<!-- 					*********** QUIZ DIV ***********			         -->
+	<div class="container cover py-2" id="quiz" style="display: none;">
+		<small class="display-4 m-2 text-center" style="color: beige;">Quiz</small>
+		<p id="explain4" class="mx-2 px-1 my-2 text-warning">
+			Time to see how much you've learned! There are 5 multiple-choice questions below. Can you get them all right?
+		</p>
+		<!-- ****  Bootstrap Feature submission **** -->
+		<!-- Created form with Bootstrap styling -->
+		<form style="margin: 1em;">
+			<p style="color: #F8DE7E">You see two safeties just ouside the hashes with the corners pressed up against your receivers. What coverage is this likely to be?</p>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q1o1" name="q1" value="Cover2">
+			<label class="form-check-label text-light" for="q1o1">Cover 2</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q1o2" name="q1" value="Cover3">
+			<label class="form-check-label text-light" for="q1o2">Cover 3</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q1o3" name="q1" value="Cover4">
+			<label class="form-check-label text-light" for="q1o3">Cover 4</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q1o4" name="q1" value="Cover1">
+			<label class="form-check-label text-light" for="q1o4">Cover 1</label><br>
+			</div>
+
+			<br>
+
+			<p style="color: #F8DE7E">Will, Sam, and Mike are all mnemonic devices that represent which terms for offensive personnel alignment?</p>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q2o1" name="q2" value="Cover2">
+			<label class="form-check-label text-light" for="q2o1">Wonka, Smith, Tyson</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q2o2" name="q2" value="Cover3">
+			<label class="form-check-label text-light" for="q2o2">West Coast, Safety, MacIntosh</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q2o3" name="q2" value="Cover4">
+			<label class="form-check-label text-light" for="q2o3">Woman, Son, Man</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q2o4" name="q2" value="Cover1">
+			<label class="form-check-label text-light" for="q2o4">Weak, Strong, Middle</label><br>
+			</div>
+
+			<br>
+
+			<p style="color: #F8DE7E">In general, where are the weaknesses in a defense?</p>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q3o1" name="q3" value="Cover2">
+			<label class="form-check-label text-light" for="q3o1">Where the safeties aren't pre-snap, because they won't cover that area as effectively</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q3o2" name="q3" value="Cover3">
+			<label class="form-check-label text-light" for="q3o2">Where the safeties are pre-snap, since they'll move from that area and create a weak zone</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q3o3" name="q3" value="Cover4">
+			<label class="form-check-label text-light" for="q3o3">Where the safeties are post-snap, since you'll want to throw the ball their way in order to fluster them</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q3o4" name="q3" value="Cover1">
+			<label class="form-check-label text-light" for="q3o4">Where the Mike isn't pre-snap, since he acts as a ball hawk/spy</label><br>
+			</div>
+
+			<br>
+
+			<p style="color: #F8DE7E">You set a receiver in motion before the snap (the receiver runs to the other side of the line of scrimmage) and a defender follows his motion to that other side, indicating man coverage. What coverage is this likely to be?</p>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q4o1" name="q4" value="Cover2">
+			<label class="form-check-label text-light" for="q4o1">Cover 1</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q4o2" name="q4" value="Cover3">
+			<label class="form-check-label text-light" for="q4o2">Cover 3</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q4o3" name="q4" value="Cover4">
+			<label class="form-check-label text-light" for="q4o3">Cover 4</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="radio" id="q4o4" name="q4" value="Cover1">
+			<label class="form-check-label text-light" for="q4o4">Cover 2</label><br>
+			</div>
+
+			<br>
+
+			<p style="color: #F8DE7E">In which coverages does the strong safety act as a box defender (lined up with the linebackers)?</p>
+			<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="q5o1" name="q5" value="Cover2">
+			<label class="form-check-label text-light" for="q5o1">Cover 1</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="q5o2" name="q5" value="Cover3">
+			<label class="form-check-label text-light" for="q5o2">Cover 2</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="q5o3" name="q5" value="Cover4">
+			<label class="form-check-label text-light" for="q5o3">Cover 3</label><br>
+			</div>
+			<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="q5o4" name="q5" value="Cover1">
+			<label class="form-check-label text-light" for="q5o4">Cover 4</label><br>
+			</div>
+
+			<br>
+			<br>
+		</form>
+		<button id="quizBtn" class="btn btn-warning mx-2" onclick="checkAnswers()">Submit</button>
+		
+	</div>
+
+	
+	
+  <!-- JS -->
+
+  <!-- Coverage Management -->
+  <!-- ****  jQuery substitute for CSS Feature submission **** -->
+  <!-- Setting display to none via .css() -->
+
+  <!-- ****  JavaScript Feature submission **** -->
+  <!-- Use of functions -->
+  <script defer>
+	  var onDisplay = 1;
+	  function displayCoverOne()
+	  {
+		  switch (onDisplay)
+		  {
+			  case 2:
+				  $("#coverTwo").fadeOut("fast");
+				  $("#coverTwo").css("display","none");
+				  break;
+			  case 3:
+				  $("#coverThree").fadeOut("fast");
+				  $("#coverThree").css("display","none");
+				  break;
+			  case 4:
+				  $("#coverFour").fadeOut("fast");
+				  $("#coverFour").css("display","none");
+				  break;
+			  case 5:
+				  $("#quiz").fadeOut("fast");
+				  $("#quiz").css("display","none");
+				  break;
+			  case 6:
+				  $("#key").fadeOut("fast");
+				  $("#key").css("display","none");
+				  break;
+		  }
+		  $("#coverOne").fadeIn("fast");
+		  onDisplay = 1;
+	  }
+	  function displayCoverTwo()
+	  {
+		  switch (onDisplay)
+		  {
+			  case 1:
+				  $("#coverOne").fadeOut("fast");
+				  $("#coverOne").css("display","none");
+				  break;
+			  case 3:
+				  $("#coverThree").fadeOut("fast");
+				  $("#coverThree").css("display","none");
+				  break;
+			  case 4:
+				  $("#coverFour").fadeOut("fast");
+				  $("#coverFour").css("display","none");
+				  break;
+			  case 5:
+				  $("#quiz").fadeOut("fast");
+				  $("#quiz").css("display","none");
+				  break;
+			  case 6:
+				  $("#key").fadeOut("fast");
+				  $("#key").css("display","none");
+				  break;
+		  }
+		  $("#coverTwo").fadeIn("fast");
+		  onDisplay = 2;
+	  }
+	  function displayCoverThree()
+	  {
+		  switch (onDisplay)
+		  {
+			  case 1:
+				  $("#coverOne").fadeOut("fast");
+				  $("#coverOne").css("display","none");
+				  break;
+			  case 2:
+				  $("#coverTwo").fadeOut("fast");
+				  $("#coverTwo").css("display","none");
+				  break;
+			  case 4:
+				  $("#coverFour").fadeOut("fast");
+				  $("#coverFour").css("display","none");
+				  break;
+			  case 5:
+				  $("#quiz").fadeOut("fast");
+				  $("#quiz").css("display","none");
+				  break;
+			  case 6:
+				  $("#key").fadeOut("fast");
+				  $("#key").css("display","none");
+				  break;
+		  }
+		  $("#coverThree").fadeIn("fast");
+		  onDisplay = 3;
+	  }
+	  function displayCoverFour()
+	  {
+		  switch (onDisplay)
+		  {
+			  case 1:
+				  $("#coverOne").fadeOut("fast");
+				  $("#coverOne").css("display","none");
+				  break;
+			  case 2:
+				  $("#coverTwo").fadeOut("fast");
+				  $("#coverTwo").css("display","none");
+				  break;
+			  case 3:
+				  $("#coverThree").fadeOut("fast");
+				  $("#coverThree").css("display","none");
+				  break;
+			  case 5:
+				  $("#quiz").fadeOut("fast");
+				  $("#quiz").css("display","none");
+				  break;
+			  case 6:
+				  $("#key").fadeOut("fast");
+				  $("#key").css("display","none");
+				  break;
+		  }
+		  $("#coverFour").fadeIn("fast");
+		  onDisplay = 4;
+	  }
+	  function displayQuiz()
+	  {
+		  switch (onDisplay)
+		  {
+			  case 1:
+				  $("#coverOne").fadeOut("fast");
+				  $("#coverOne").css("display","none");
+				  break;
+			  case 2:
+				  $("#coverTwo").fadeOut("fast");
+				  $("#coverTwo").css("display","none");
+				  break;
+			  case 3:
+				  $("#coverThree").fadeOut("fast");
+				  $("#coverThree").css("display","none");
+				  break;
+			  case 4:
+				  $("#coverFour").fadeOut("fast");
+				  $("#coverFour").css("display","none");
+				  break;
+			  case 6:
+				  $("#key").fadeOut("fast");
+				  $("#key").css("display","none");
+				  break;
+		  }
+		  $("#quiz").fadeIn("fast");
+		  onDisplay = 5;
+	  }
+  </script>
+
+  <!-- ****  jQuery substitute for CSS Feature submission **** -->
+  <!-- Animation of "players" via .animate() -->
+	
+  <!-- ****  JavaScript Feature submission **** -->
+  <!-- Changing explanatory text to fit the post-play situation -->
+  <!-- Cover One JS -->
+  <script defer>
+	  //			*************Cover One Progression*************
+	  $("#nextBtn1").click(() => {
+		  $("#cover1X").animate({
+			  "bottom" : "+=13em"
+		  }, 2000);
+		  $("#cover1C1").animate({
+			  "bottom" : "+=2em"
+		  }, 2000);
+		  $("#cover1QB").animate({
+			  "bottom" : "-=4.5em"
+		  }, 750);
+		  $("#cover1HB").animate({
+			  "bottom" : "+=1em"
+		  }, 750);
+		  $("#cover1Z").animate({
+			  "bottom" : "+=14em",
+			  "left" : "-=15%"
+		  }, 2000);
+		  $("#cover1C2").animate({
+			  "bottom" : "+=4em"
+		  }, 2000);
+		  $("#cover1FS").animate({
+			  "left" : "-=20%"
+		  }, 2000);
+		  $("#cover1SS").animate({
+			  "bottom" : "-=6em",
+			  "left" : "+=10%"
+		  }, 2000);
+		  $("#cover1M").animate({
+			  "bottom" : "+=3.5em",
+			  "left" : "-=7%"
+		  }, 2000);
+		  $("#cover1W").animate({
+			  "top" : "+=2em",
+			  "left" : "+=3%"
+		  }, 2000);
+		  $("#cover1E1").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover1T").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover1N").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover1E2").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover1Y").animate({
+			  "bottom" : "+=1.5em",
+			  "left" : "+=15%"
+		  }, 1500);
+		  $("#cover1S").animate({
+			  "bottom" : "+=0.5em",
+			  "left" : "+=19%"
+		  }, 1500);
+		  document.getElementById("backBtn1").disabled = false;
+		  document.getElementById("nextBtn1").disabled = true;
+		  setTimeout(function(){
+			  document.getElementById("cover1Z").style.background = "green";
+			  var explain = document.getElementById("explain1");
+			  explain.innerHTML = "Cover one, however, is weak against double go routes; that is, if both the X and Z receivers run go routes (a route where the receiver only runs upfield), the safety must choose one to defend against, leaving one receiver free as shown. <br><br> Of course, if the defense is fast enough, they'll be able to handle man coverage just fine. If not, you've got a touchdown!";
+		  },2000);
+	  });
+
+		  $("#backBtn1").click(() => {
+		  $("#cover1X").animate({
+			  "bottom" : "-=13em"
+		  });
+		  $("#cover1C1").animate({
+			  "bottom" : "-=2em"
+		  });
+		  $("#cover1QB").animate({
+			  "bottom" : "+=4.5em"
+		  });
+		  $("#cover1HB").animate({
+			  "bottom" : "-=1em"
+		  });
+		  $("#cover1Z").animate({
+			  "bottom" : "-=14em",
+			  "left" : "+=15%"
+		  });
+		  $("#cover1C2").animate({
+			  "bottom" : "-=4em"
+		  });
+		  $("#cover1FS").animate({
+			  "left" : "+=20%"
+		  });
+		  $("#cover1SS").animate({
+			  "bottom" : "+=6em",
+			  "left" : "-=10%"
+		  });
+		  $("#cover1M").animate({
+			  "bottom" : "-=3.5em",
+			  "left" : "+=7%"
+		  });
+		  $("#cover1W").animate({
+			  "top" : "-=2em",
+			  "left" : "-=3%"
+		  });
+		  $("#cover1E1").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover1T").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover1N").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover1E2").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover1Y").animate({
+			  "bottom" : "-=1.5em",
+			  "left" : "-=15%"
+		  });
+		  $("#cover1S").animate({
+			  "bottom" : "-=0.5em",
+			  "left" : "-=19%"
+		  });
+		  document.getElementById("cover1Z").style.background = "blue";
+		  document.getElementById("backBtn1").disabled = true;
+		  document.getElementById("nextBtn1").disabled = false;
+		  var explain = document.getElementById("explain1");
+		  explain.innerHTML = "Cover One, also known as Man Free, is a defensive scheme where one safety is dropped back into coverage while every other defender plays man coverage. <br><br> There is usually an extra defender remaining, who can either blitz or drop back to provide extra protection against slants and other short crossing routes.<br><br> Hover over each of the defenders below to learn more about each position and to highlight the offensive position they deal with:";
+	  });
+  </script>
+
+  <!-- ****  JavaScript Feature submission **** -->
+  <!-- Changing appearance and position of div -->
+  <script defer>
+	  //			*************Cover One Players JS*************
+	  
+	  //FS descriptor
+	  document.getElementById("cover1FS").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "The free safety is responsible for the zone between the hashes around 15-20 yards from the line of scrimmage. He can provide double coverage for a difficult wideout, read the quarterback's eyes to make a play on the ball, and take care of any streak/post routes. He doesn't get involved with the run unless the running back breaks free.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var QB = document.getElementById("cover1QB");
+		  QB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover1FS").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var QB = document.getElementById("cover1QB");
+		  QB.style.background = "blue";
+	  }, false);
+
+	  //SS descriptor
+document.getElementById("cover1SS").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "The strong safety actually plays man coverage, matching up against the halfback. He is responsible for stuffing the run, and if the halfback is pass blocking, he can blitz.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var HB = document.getElementById("cover1HB");
+		  HB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover1SS").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var HB = document.getElementById("cover1HB");
+		  HB.style.background = "blue";
+	  }, false);
+
+	  //W descriptor
+	  document.getElementById("cover1W").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "The W stands for \"Will\", a term for a linebacker that lines up on the weak (non-TE) side of the field. The Will matches up with the fullback similar to the strong safety; if the fullback is not present, the Will stuffs the run and/or blitzes.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var FB = document.getElementById("cover1FB");
+		  FB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover1W").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var FB = document.getElementById("cover1FB");
+		  FB.style.background = "blue";
+	  }, false);
+
+	  //W descriptor
+	  document.getElementById("cover1M").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "The M stands for \"Mike\", which refers to the inside/middle linebacker. He acts as a plugger by defending the zone between the hashes 5-10 yards off the line of scrimmage in order to prevent in/slant route completions and possibly pick off the quarterback. For more mobile quarterbacks, he can act as a spy.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var QB = document.getElementById("cover1QB");
+		  QB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover1M").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var QB = document.getElementById("cover1QB");
+		  QB.style.background = "blue";
+	  }, false);
+
+	  //C1 descriptor
+	  document.getElementById("cover1C1").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "This corner is responsible for covering the X receiver, the farthest receiver from the tight end. Here he is playing off-man coverage (7-8 yards away from the line of scrimmage) to fake a possible zone scheme, but can also play press coverage (1-2 yards off the line of scrimmage).";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var X = document.getElementById("cover1X");
+		  X.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover1C1").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var X = document.getElementById("cover1X");
+		  X.style.background = "blue";
+	  }, false);
+
+	  //S descriptor
+	  document.getElementById("cover1S").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "The S stands for \"Sam\", which refers to the linebacker lined up on the strong side (side of the tight end). He either covers the tight end or slot (inside) receiver.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var Y = document.getElementById("cover1Y");
+		  Y.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover1S").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var Y = document.getElementById("cover1Y");
+		  Y.style.background = "blue";
+	  }, false);
+
+	  //C2 descriptor
+	  document.getElementById("cover1C2").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "This corner is responsible for covering the Z receiver, the closest receiver to the tight end. Here he is playing press coverage (1-2 yards off the line of scrimmage) in order to \"jam\" a receiver: he can wrestle and push against a receiver at the snap to throw off the receiver's route timing.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + ((e.pageY - $("#defenderInfo1").height())) + "px";
+	  	  infobox.style.display = "block";
+		  var Z = document.getElementById("cover1Z");
+		  Z.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover1C2").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var Z = document.getElementById("cover1Z");
+		  if (document.getElementById("nextBtn1").disabled) Z.style.background = "green";
+		  else Z.style.background = "blue";
+	  }, false);
+
+	  //E1 descriptor
+	  document.getElementById("cover1E1").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "This is an edge rusher lined up with the left tackle. He tries to sack the quarterback.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + ((e.pageY - $("#defenderInfo1").height())) + "px";
+	  	  infobox.style.display = "block";
+		  var LT = document.getElementById("cover1LT");
+		  LT.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover1E1").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var LT = document.getElementById("cover1LT");
+		  LT.style.background = "blue";
+	  }, false);
+
+	  //T descriptor
+	  document.getElementById("cover1T").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "This is a defensive tackle who is matched up against the left guard. He tries to sack the quarterback or stuff the run.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var LG = document.getElementById("cover1LG");
+		  LG.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover1T").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var LG = document.getElementById("cover1LG");
+		  LG.style.background = "blue";
+	  }, false);
+
+	  //N descriptor
+	  document.getElementById("cover1N").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "This is a nose tackle. He is often double-teamed by the center and right guard in order to open up a hole for the running back. He will still try to stuff the run or sack the quarterback.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var Ce = document.getElementById("cover1Center");
+		  Ce.style.background = "#FFDC00";
+		  var RG = document.getElementById("cover1RG");
+		  RG.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover1N").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var Ce = document.getElementById("cover1Center");
+		  Ce.style.background = "blue";
+		  var RG = document.getElementById("cover1RG");
+		  RG.style.background = "blue";
+	  }, false);
+
+	  //N descriptor
+	  document.getElementById("cover1E2").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "This is an edge rusher lined up with the right tackle. He tries to sack the quarterback. I've positioned him slightly inside the right tackle since the right guard will be preoccupied with the nose tackle, possibly opening up a weakness for this rusher to exploit.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var RT = document.getElementById("cover1RT");
+		  RT.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover1E2").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo1");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo1").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var RT = document.getElementById("cover1RT");
+		  RT.style.background = "blue";
+	  }, false);
+  </script>
+
+
+  <!-- Cover Two JS -->
+  <script defer>
+	  //			*************Cover Two Progression*************
+	  $("#nextBtn2").click(() => {
+		  $("#cover2X").animate({
+			  "bottom" : "+=13em"
+		  }, 2000);
+		  $("#cover2C1").animate({
+			  "bottom" : "+=2em"
+		  }, 2000);
+		  $("#cover2QB").animate({
+			  "bottom" : "-=4.5em"
+		  }, 750);
+		  $("#cover2HB").animate({
+			  "bottom" : "+=8em",
+			  "left" : "+=30%"
+		  }, 2000);
+		  $("#cover2Z").animate({
+			  "bottom" : "+=12em",
+			  "left" : "-=3%"
+		  }, 2000);
+		  $("#cover2C2").animate({
+			  "bottom" : "+=2.5em"
+		  }, 2000);
+		  $("#cover2FS").animate({
+			  "top" : "-=1.5em",
+			  "left" : "-=15%"
+		  }, 2000);
+		  $("#cover2SS").animate({
+			  "bottom" : "+=1.5em",
+			  "left" : "+=15%"
+		  }, 2000);
+		  $("#cover2M").animate({
+			  "bottom" : "+=3.5em",
+			  "left" : "-=7%"
+		  }, 2000);
+		  $("#cover2W").animate({
+			  "top" : "-=2em",
+			  "left" : "-=8%"
+		  }, 2000);
+		  $("#cover2E1").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover2T").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover2N").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover2E2").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover2Y").animate({
+			  "bottom" : "+=13em",
+			  "left" : "-=35%"
+		  }, 2000);
+		  $("#cover2S").animate({
+			  "bottom" : "+=2em",
+			  "left" : "-=10%"
+		  }, 2000);
+		  document.getElementById("backBtn2").disabled = false;
+		  document.getElementById("nextBtn2").disabled = true;
+		  setTimeout(function(){
+			  document.getElementById("cover2Y").style.background = "green";
+			  var explain = document.getElementById("explain2");
+			  explain.innerHTML = "Cover two, however, is weak down the deep middle. This is because the safeties are more concerned with go routes down the middle this time, leaving an open space between the hashes. This isn't a guaranteed touchdown, however; the safeties will be following the quarterback's eyes, so they'll rush to the middle of the field soon enough. But hey, that's a solid 15-20 yard gain right there! <br><br> As a general rule of thumb, the weaknesses in a zone defense are located in the spots where the safeties aren't before the snap.";
+		  },2000);
+	  });
+
+		  $("#backBtn2").click(() => {
+		  $("#cover2X").animate({
+			  "bottom" : "-=13em"
+		  });
+		  $("#cover2C1").animate({
+			  "bottom" : "-=2em"
+		  });
+		  $("#cover2QB").animate({
+			  "bottom" : "+=4.5em"
+		  });
+		  $("#cover2HB").animate({
+			  "bottom" : "-=8em",
+			  "left" : "-=30%"
+		  });
+		  $("#cover2Z").animate({
+			  "bottom" : "-=12em",
+			  "left" : "+=3%"
+		  });
+		  $("#cover2C2").animate({
+			  "bottom" : "-=2.5em"
+		  });
+		  $("#cover2FS").animate({
+			  "top" : "+=1.5em",
+			  "left" : "+=15%"
+		  });
+		  $("#cover2SS").animate({
+			  "bottom" : "-=1.5em",
+			  "left" : "-=15%"
+		  });
+		  $("#cover2M").animate({
+			  "bottom" : "-=3.5em",
+			  "left" : "+=7%"
+		  });
+		  $("#cover2W").animate({
+			  "top" : "+=2em",
+			  "left" : "+=8%"
+		  });
+		  $("#cover2E1").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover2T").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover2N").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover2E2").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover2Y").animate({
+			  "bottom" : "-=13em",
+			  "left" : "+=35%"
+		  });
+		  $("#cover2S").animate({
+			  "bottom" : "-=2em",
+			  "left" : "+=10%"
+		  });
+		  document.getElementById("cover2Y").style.background = "blue";
+		  document.getElementById("backBtn2").disabled = true;
+		  document.getElementById("nextBtn2").disabled = false;
+		  var explain = document.getElementById("explain2");
+		  explain.innerHTML = "Cover Two is more of a \"zone\" defense: a defense where players are assigned to an area of the field to cover. The safeties will be positioned just outside the hashes about 15 yards back from the line of scrimmage, and they each monitor their area from the middle of the field to their respective sideline. <br><br>The linebackers are tasked with monitoring the part of the field 5-12 yards back from the line of scrimmage in a formation called Tampa 2. They cover three zones among the three of them.<br><br>Hover over each of the defenders below to learn more about each position and their zone:";
+	  });
+  </script>
+  <script defer>
+	  //			*************Cover Two Players JS*************
+	  
+	  //FS descriptor
+	  document.getElementById("cover2FS").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "The free safety is responsible for the zone left of the hashes around 15 yards from the line of scrimmage. He can provide coverage for the X receiver should that receiver venture in his zone, read the quarterback's eyes to make a play on the ball, and take care of any streak/post routes his way. He doesn't get involved with the run unless the running back breaks free.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var QB = document.getElementById("cover2QB");
+		  QB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover2FS").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var QB = document.getElementById("cover2QB");
+		  QB.style.background = "blue";
+	  }, false);
+
+	  //SS descriptor
+document.getElementById("cover2SS").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "The strong safety is responsible for the zone right of the hashes around 15 yards from the line of scrimmage. He can provide coverage for the Z receiver should that receiver venture in his zone, read the quarterback's eyes to make a play on the ball, and take care of any streak/post routes his way. He doesn't get involved with the run unless the running back breaks free.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var HB = document.getElementById("cover2HB");
+		  HB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover2SS").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var HB = document.getElementById("cover2HB");
+		  HB.style.background = "blue";
+	  }, false);
+
+	  //W descriptor
+	  document.getElementById("cover2W").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "The W stands for \"Will\", a term for a linebacker that lines up on the weak (non-TE) side of the field. The Will shows blitz here, but actually drops back about 5 yards and to the left of the middle. This way, he can stop any big gains from quick slants and in routes.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var FB = document.getElementById("cover2FB");
+		  FB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover2W").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var FB = document.getElementById("cover2FB");
+		  FB.style.background = "blue";
+	  }, false);
+
+	  //W descriptor
+	  document.getElementById("cover2M").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "The M stands for \"Mike\", which refers to the inside/middle linebacker. He shows blitz here, but actually drops back 5-10 yards off the line of scrimmage and guards the middle. This way, he can prevent completions or big gains in the middle of the field (including run plays up the middle).";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var QB = document.getElementById("cover2QB");
+		  QB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover2M").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var QB = document.getElementById("cover2QB");
+		  QB.style.background = "blue";
+	  }, false);
+
+	  //C1 descriptor
+	  document.getElementById("cover2C1").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "This corner is pressed up against the X receiver, but he really only cares about this receiver until about 5 yards back. His main goal, other than jamming the X, is to defend the left flat (the area close to the line of scrimmage and near the left sideline).";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var X = document.getElementById("cover2X");
+		  X.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover2C1").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var X = document.getElementById("cover2X");
+		  X.style.background = "blue";
+	  }, false);
+
+	  //S descriptor
+	  document.getElementById("cover2S").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "The S stands for \"Sam\", which refers to the linebacker lined up on the strong side (side of the tight end). Here, he looks like he's matched up against the Y (slot) receiver, but he'll actually drop a couple yards back and stay there, defending the zone around him.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var Y = document.getElementById("cover2Y");
+		  Y.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover2S").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var Y = document.getElementById("cover2Y");
+		  if (document.getElementById("nextBtn2").disabled) Y.style.background = "green";
+		  else Y.style.background = "blue";
+	  }, false);
+
+	  //C2 descriptor
+	  document.getElementById("cover2C2").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "This corner is pressed up against the Z receiver, but he really only cares about this receiver until about 5 yards back. His main goal, other than jamming the Z, is to defend right flat (the area close to the line of scrimmage and near the right sideline).";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + ((e.pageY - $("#defenderInfo2").height())) + "px";
+	  	  infobox.style.display = "block";
+		  var Z = document.getElementById("cover2Z");
+		  Z.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover2C2").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var Z = document.getElementById("cover2Z");
+		  Z.style.background = "blue";
+	  }, false);
+
+	  //E1 descriptor
+	  document.getElementById("cover2E1").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "This is an edge rusher lined up with the left tackle. He tries to sack the quarterback.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + ((e.pageY - $("#defenderInfo2").height())) + "px";
+	  	  infobox.style.display = "block";
+		  var LT = document.getElementById("cover2LT");
+		  LT.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover2E1").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var LT = document.getElementById("cover2LT");
+		  LT.style.background = "blue";
+	  }, false);
+
+	  //T descriptor
+	  document.getElementById("cover2T").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "This is a defensive tackle who is matched up against the left guard. He tries to sack the quarterback or stuff the run.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var LG = document.getElementById("cover2LG");
+		  LG.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover2T").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var LG = document.getElementById("cover2LG");
+		  LG.style.background = "blue";
+	  }, false);
+
+	  //N descriptor
+	  document.getElementById("cover2N").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "This is a nose tackle. He is often double-teamed by the center and right guard in order to open up a hole for the running back. He will still try to stuff the run or sack the quarterback.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var Ce = document.getElementById("cover2Center");
+		  Ce.style.background = "#FFDC00";
+		  var RG = document.getElementById("cover2RG");
+		  RG.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover2N").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var Ce = document.getElementById("cover2Center");
+		  Ce.style.background = "blue";
+		  var RG = document.getElementById("cover2RG");
+		  RG.style.background = "blue";
+	  }, false);
+
+	  //N descriptor
+	  document.getElementById("cover2E2").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "This is an edge rusher lined up with the right tackle. He tries to sack the quarterback. I've positioned him slightly inside the right tackle since the right guard will be preoccupied with the nose tackle, possibly opening up a weakness for this rusher to exploit.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var RT = document.getElementById("cover2RT");
+		  RT.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover2E2").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo2");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo2").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var RT = document.getElementById("cover2RT");
+		  RT.style.background = "blue";
+	  }, false);
+  </script>
+
+
+  <!-- Cover Three JS -->
+  <script defer>
+	  //			*************Cover Three Progression*************
+	  $("#nextBtn3").click(() => {
+		  $("#cover3X").animate({
+			  "bottom" : "+=5em"
+		  }, {"queue": true,"duration": 1000});
+		  $("#cover3X").animate({
+			  "bottom" : "-=2em"
+		  }, {"queue": true,"duration": 1000});
+		  $("#cover3C1").animate({
+			  "bottom" : "+=3em"
+		  }, 2000);
+		  $("#cover3QB").animate({
+			  "bottom" : "-=4.5em"
+		  }, 750);
+		  $("#cover3HB").animate({
+			  "bottom" : "+=8em",
+			  "left" : "+=30%"
+		  }, 2000);
+		  $("#cover3Z").animate({
+			  "bottom" : "+=5.5em",
+			  "left" : "-=40%"
+		  }, 2000);
+		  $("#cover3C2").animate({
+			  "bottom" : "+=2.5em"
+		  }, 2000);
+		  $("#cover3FS").animate({
+			  "top" : "-=2.5em",
+		  }, 2000);
+		  $("#cover3SS").animate({
+			  "bottom" : "+=1em",
+			  "left" : "+=10%"
+		  }, 2000);
+		  $("#cover3M").animate({
+			  "bottom" : "+=1.5em",
+			  "left" : "-=5%"
+		  }, 2000);
+		  $("#cover3W").animate({
+			  "top" : "-=1em",
+			  "left" : "-=8%"
+		  }, 2000);
+		  $("#cover3E1").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover3T").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover3N").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover3E2").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover3Y").animate({
+			  "bottom" : "+=14em",
+			  "left" : "-=11%"
+		  }, 2000);
+		  $("#cover3S").animate({
+			  "bottom" : "+=1em",
+			  "left" : "+=7%"
+		  }, 2000);
+		  document.getElementById("backBtn3").disabled = false;
+		  document.getElementById("nextBtn3").disabled = true;
+		  setTimeout(function(){
+			  document.getElementById("cover3Y").style.background = "green";
+			  var explain = document.getElementById("explain3");
+			  explain.innerHTML = "Cover three, however, is weak down the seams (the hashes). Admittedly, this has a fairly tighter window than the other weaknesses, but a fast enought receiver can hit it easily. <br><br>Notice also that, if the free safety does manage to cover the Y receiver, you've got a nice dump-off pass to the X receiver, whose curl route flew under the radar of the Will and the deep left corner. That should net you about 7 yards - perfect for most 3rd down conversions and the like.";
+		  },2000);
+	  });
+
+		  $("#backBtn3").click(() => {
+		  $("#cover3X").animate({
+			  "bottom" : "-=3em"
+		  });
+		  $("#cover3C1").animate({
+			  "bottom" : "-=3em"
+		  });
+		  $("#cover3QB").animate({
+			  "bottom" : "+=4.5em"
+		  });
+		  $("#cover3HB").animate({
+			  "bottom" : "-=8em",
+			  "left" : "-=30%"
+		  });
+		  $("#cover3Z").animate({
+			  "bottom" : "-=5.5em",
+			  "left" : "+=40%"
+		  });
+		  $("#cover3C2").animate({
+			  "bottom" : "-=2.5em"
+		  });
+		  $("#cover3FS").animate({
+			  "top" : "+=2.5em",
+		  });
+		  $("#cover3SS").animate({
+			  "bottom" : "-=1em",
+			  "left" : "-=10%"
+		  });
+		  $("#cover3M").animate({
+			  "bottom" : "-=1.5em",
+			  "left" : "+=5%"
+		  });
+		  $("#cover3W").animate({
+			  "top" : "+=1em",
+			  "left" : "+=8%"
+		  });
+		  $("#cover3E1").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover3T").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover3N").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover3E2").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover3Y").animate({
+			  "bottom" : "-=14em",
+			  "left" : "+=11%"
+		  });
+		  $("#cover3S").animate({
+			  "bottom" : "-=1em",
+			  "left" : "-=7%"
+		  });
+		  document.getElementById("cover3Y").style.background = "blue";
+		  document.getElementById("backBtn3").disabled = true;
+		  document.getElementById("nextBtn3").disabled = false;
+		  var explain = document.getElementById("explain3");
+		  explain.innerHTML = "Cover Three is a zone defense which aims to solve the middle-of-the-field vulnerability that Cover 2 presents. One safety drops back to guard the middle about 15 yards off the line of scrimmage, while this time, the corners play off man coverage and sink back about 12 yards off the line of scrimmage. They guard the sidelines, but if a receiver runs a streak route and passes them, the corners switch to man coverage and follow that receiver.<br><br>The linebackers and strong safety, meanwhile, split the field horizontally into four parts, with each defender being assigned a part to cover. This makes it hard for offenses to run short completion routes over the middle. <br><br>Hover over each of the defenders below to learn more about each position and their zone:";
+	  });
+  </script>
+  <script defer>
+	  //			*************Cover Three Players JS*************
+	  
+	  //FS descriptor
+	  document.getElementById("cover3FS").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "The free safety is responsible for the deep middle third of the field around 15 yards from the line of scrimmage. He can provide coverage for any post or dig routes and read the quarterback's eyes to make a play on the ball. He doesn't get involved with the run unless the running back breaks free.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var QB = document.getElementById("cover3QB");
+		  QB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover3FS").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var QB = document.getElementById("cover3QB");
+		  QB.style.background = "blue";
+	  }, false);
+
+	  //SS descriptor
+document.getElementById("cover3SS").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "The strong safety is responsible for the right flat (the zone 5-8 yards of the line of scrimmage near the right sideline). He can provide coverage for the Z receiver should that receiver venture in his zone. He can also stop the run if the halfback bounces to the outside.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var HB = document.getElementById("cover3HB");
+		  HB.style.background = "#FFDC00";
+		  var Z = document.getElementById("cover3Z");
+		  Z.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover3SS").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var HB = document.getElementById("cover3HB");
+		  HB.style.background = "blue";
+		  var Z = document.getElementById("cover3Z");
+		  Z.style.background = "blue";
+	  }, false);
+
+	  //W descriptor
+	  document.getElementById("cover3W").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "The Will is responsible for the left flat (the zone 5-8 yards of the line of scrimmage near the left sideline). He can provide coverage for the X receiver should that receiver venture in his zone. He can also stop the run if the halfback bounces to the outside.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var FB = document.getElementById("cover3FB");
+		  FB.style.background = "#FFDC00";
+		  var X = document.getElementById("cover3X");
+		  X.style.background = "#FFDC00";
+		  var HB = document.getElementById("cover3HB");
+		  HB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover3W").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var FB = document.getElementById("cover3FB");
+		  FB.style.background = "blue";
+		  var X = document.getElementById("cover3X");
+		  X.style.background = "blue";
+		  var HB = document.getElementById("cover3HB");
+		  HB.style.background = "blue";
+	  }, false);
+
+	  //W descriptor
+	  document.getElementById("cover3M").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "The Mike drops back a couple yards to guard the zone known as the left hook (the zone just left of middle about 7 yards back from the line of scrimmage). He can stuff the run and cover middle-of-the-field curl routes.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var QB = document.getElementById("cover3QB");
+		  QB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover3M").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var QB = document.getElementById("cover3QB");
+		  QB.style.background = "blue";
+	  }, false);
+
+	  //C1 descriptor
+	  document.getElementById("cover3C1").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "This corner will act as an additional \"sideline\" safety, so he's technically playing off-man on the X receiver. The coerner will drop back a few yards to cover the deep left third of the field, but if the X is on a streak route, the corner will switch to man coverage and cover the X.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var X = document.getElementById("cover3X");
+		  X.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover3C1").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var X = document.getElementById("cover3X");
+		  X.style.background = "blue";
+	  }, false);
+
+	  //S descriptor
+	  document.getElementById("cover3S").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "The Sam drops back a couple yards to guard the zone known as the right hook (the zone just right of middle about 7 yards back from the line of scrimmage). He can stuff the run and cover middle-of-the-field curl routes.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var Y = document.getElementById("cover3Y");
+		  Y.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover3S").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var Y = document.getElementById("cover3Y");
+		  if (document.getElementById("nextBtn3").disabled) Y.style.background = "green";
+		  else Y.style.background = "blue";
+	  }, false);
+
+	  //C2 descriptor
+	  document.getElementById("cover3C2").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "This corner will act as an additional \"sideline\" safety, so he's technically playing off-man on the Z receiver. The corner will drop back a few yards to cover the deep right third of the field, but if the Z is on a streak route, the corner will switch to man coverage and cover the Z.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + ((e.pageY - $("#defenderInfo3").height())) + "px";
+	  	  infobox.style.display = "block";
+		  var Z = document.getElementById("cover3Z");
+		  Z.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover3C2").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var Z = document.getElementById("cover3Z");
+		  Z.style.background = "blue";
+	  }, false);
+
+	  //E1 descriptor
+	  document.getElementById("cover3E1").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "This is an edge rusher lined up with the left tackle. He tries to sack the quarterback.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + ((e.pageY - $("#defenderInfo3").height())) + "px";
+	  	  infobox.style.display = "block";
+		  var LT = document.getElementById("cover3LT");
+		  LT.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover3E1").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var LT = document.getElementById("cover3LT");
+		  LT.style.background = "blue";
+	  }, false);
+
+	  //T descriptor
+	  document.getElementById("cover3T").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "This is a defensive tackle who is matched up against the left guard. He tries to sack the quarterback or stuff the run.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var LG = document.getElementById("cover3LG");
+		  LG.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover3T").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var LG = document.getElementById("cover3LG");
+		  LG.style.background = "blue";
+	  }, false);
+
+	  //N descriptor
+	  document.getElementById("cover3N").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "This is a nose tackle. He is often double-teamed by the center and right guard in order to open up a hole for the running back. He will still try to stuff the run or sack the quarterback.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var Ce = document.getElementById("cover3Center");
+		  Ce.style.background = "#FFDC00";
+		  var RG = document.getElementById("cover3RG");
+		  RG.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover3N").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var Ce = document.getElementById("cover3Center");
+		  Ce.style.background = "blue";
+		  var RG = document.getElementById("cover3RG");
+		  RG.style.background = "blue";
+	  }, false);
+
+	  //N descriptor
+	  document.getElementById("cover3E2").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "This is an edge rusher lined up with the right tackle. He tries to sack the quarterback. I've positioned him slightly inside the right tackle since the right guard will be preoccupied with the nose tackle, possibly opening up a weakness for this rusher to exploit.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var RT = document.getElementById("cover3RT");
+		  RT.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover3E2").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo3");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo3").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var RT = document.getElementById("cover3RT");
+		  RT.style.background = "blue";
+	  }, false);
+  </script>
+
+
+  <!-- Cover Four JS -->
+  <script defer>
+	  //			*************Cover Four Progression*************
+	  $("#nextBtn4").click(() => {
+		  $("#cover4X").animate({
+			  "bottom" : "+=11em"
+		  }, {"queue": true,"duration": 1000});
+		  $("#cover4X").animate({
+			  "left" : "+=20%"
+		  }, {"queue": true,"duration": 1000});
+		  $("#cover4C1").animate({
+			  "bottom" : "+=5em"
+		  }, 2000);
+		  $("#cover4QB").animate({
+			  "bottom" : "-=4.5em"
+		  }, 750);
+		  $("#cover4HB").animate({
+			  "bottom" : "+=8em",
+			  "left" : "+=30%"
+		  }, 2000);
+		  $("#cover4Y").animate({
+			  "bottom" : "+=5.5em",
+			  "left" : "-=37%"
+		  }, 2000);
+		  $("#cover4C2").animate({
+			  "bottom" : "+=5em"
+		  }, 2000);
+		  $("#cover4FS").animate({
+			  "top" : "-=2.25em",
+			  "left" : "-=4%"
+		  }, 2000);
+		  $("#cover4SS").animate({
+			  "bottom" : "+=2em",
+			  "left" : "+=4%"
+		  }, 2000);
+		  $("#cover4M").animate({
+			  "bottom" : "+=1.5em",
+			  "left" : "+=3%"
+		  }, 2000);
+		  $("#cover4W").animate({
+			  "top" : "-=1em",
+			  "left" : "-=8%"
+		  }, 2000);
+		  $("#cover4E1").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover4T").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover4N").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover4E2").animate({
+			  "bottom" : "-=1em"
+		  }, 900);
+		  $("#cover4Z").animate({
+			  "bottom" : "+=14em",
+			  "left" : "-=16%"
+		  }, 2000);
+		  $("#cover4S").animate({
+			  "bottom" : "-=0.5em",
+			  "left" : "+=17%"
+		  }, 2000);
+		  document.getElementById("backBtn4").disabled = false;
+		  document.getElementById("nextBtn4").disabled = true;
+		  setTimeout(function(){
+			  document.getElementById("cover4X").style.background = "green";
+			  var explain = document.getElementById("explain4");
+			  explain.innerHTML = "Since Cover four is focused so much on the long ball, there's a lot of weaknesses within 10 yards. Here we can see the the X receiver has run a dig route just behind the Will, and finds himself in a pocket of space ample enough for the quarterback to make the throw safely. If the Mike catches on, we again have a nice dump-off option with the halfback, whose wheel route sets him up to possibly run past the Sam for bigger gains.<br><br>Remember, the weaknesses always lie where the safeties aren't.";
+		  },2000);
+	  });
+
+	  $("#backBtn4").click(() => {
+		  $("#cover4X").animate({
+			  "bottom" : "-=11em",
+			  "left" : "-=20%"
+		  });
+		  $("#cover4C1").animate({
+			  "bottom" : "-=5em"
+		  });
+		  $("#cover4QB").animate({
+			  "bottom" : "+=4.5em"
+		  });
+		  $("#cover4HB").animate({
+			  "bottom" : "-=8em",
+			  "left" : "-=30%"
+		  });
+		  $("#cover4Y").animate({
+			  "bottom" : "-=5.5em",
+			  "left" : "+=37%"
+		  });
+		  $("#cover4C2").animate({
+			  "bottom" : "-=5em"
+		  });
+		  $("#cover4FS").animate({
+			  "top" : "+=2.25em",
+			  "left" : "+=4%"
+		  });
+		  $("#cover4SS").animate({
+			  "bottom" : "-=2em",
+			  "left" : "-=4%"
+		  });
+		  $("#cover4M").animate({
+			  "bottom" : "-=1.5em",
+			  "left" : "-=3%"
+		  });
+		  $("#cover4W").animate({
+			  "top" : "+=1em",
+			  "left" : "+=8%"
+		  });
+		  $("#cover4E1").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover4T").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover4N").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover4E2").animate({
+			  "bottom" : "+=1em"
+		  });
+		  $("#cover4Z").animate({
+			  "bottom" : "-=14em",
+			  "left" : "+=16%"
+		  });
+		  $("#cover4S").animate({
+			  "bottom" : "+=0.5em",
+			  "left" : "-=17%"
+		  });
+		  document.getElementById("cover4X").style.background = "blue";
+		  document.getElementById("backBtn4").disabled = true;
+		  document.getElementById("nextBtn4").disabled = false;
+		  var explain = document.getElementById("explain4");
+		  explain.innerHTML = "Cover Four is a zone defense that completely ruins a pass-happy offense's day. With four deep defenders (two corners and two safeties) and three linebackers underneath, Cover Four aims to eliminate the deep pass.<br><br>This defense is growing increasingly common in the NFL to counter the increase of pass-attack offenses. You'll also find this defense common during last-minute miracle-drive situations for the offense since the last thing the defense wants to do in that moment is to give up a long-bomb touchdown.<br><br>Hover over each of the defenders below to learn more about each position and their zone:";
+	  });
+  </script>
+  <script defer>
+	  //			*************Cover Four Players JS*************
+	  
+	  //FS descriptor
+	  document.getElementById("cover4FS").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "The free safety is responsible for the zone left of the deep middle of the field, around 15 yards from the line of scrimmage. He can provide coverage for any deep-ball routes his way and read the quarterback's eyes to make a play on the ball. He doesn't get involved with the run unless the running back breaks free.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var QB = document.getElementById("cover4QB");
+		  QB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover4FS").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var QB = document.getElementById("cover4QB");
+		  QB.style.background = "blue";
+	  }, false);
+
+	  //SS descriptor
+document.getElementById("cover4SS").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "The strong safety is responsible for the zone right of the deep middle of the field, around 15 yards from the line of scrimmage. He can provide coverage for any deep-ball routes his way and read the quarterback's eyes to make a play on the ball. He doesn't get involved with the run unless the running back breaks free.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var QB = document.getElementById("cover4QB");
+		  QB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover4SS").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var QB = document.getElementById("cover4QB");
+		  QB.style.background = "blue";
+	  }, false);
+
+	  //W descriptor
+	  document.getElementById("cover4W").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "The Will is responsible for the left curl (the zone 5-8 yards from the line of scrimmage near the left sideline) and part of the left hook (the zone 5-8 yards from the line of scrimmage just left of middle). He can provide coverage for the X receiver should that receiver venture in his zone. He can also stop the run if the halfback bounces to the outside.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var FB = document.getElementById("cover4FB");
+		  FB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover4W").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var FB = document.getElementById("cover4FB");
+		  FB.style.background = "blue";
+	  }, false);
+
+	  //W descriptor
+	  document.getElementById("cover4M").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "The Mike drops back a couple yards to guard part of the left hook (the zone just left of middle about 7 yards back from the line of scrimmage) and part of the right hook (the zone just right of middle about 7 yards back from the line of scrimmage). He can stuff the run and cover middle-of-the-field curl/in routes.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var QB = document.getElementById("cover4QB");
+		  QB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover4M").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var QB = document.getElementById("cover4QB");
+		  QB.style.background = "blue";
+	  }, false);
+
+	  //C1 descriptor
+	  document.getElementById("cover4C1").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "This corner acts as an additional \"sideline\" safety, so he's not really playing off man on the X receiver. The corner will drop back a few yards to the deep left fourth of the field, but if the X is on a streak route, the corner will switch to man coverage and cover the X.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var X = document.getElementById("cover4X");
+		  X.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover4C1").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var X = document.getElementById("cover4X");
+		  if (document.getElementById("nextBtn4").disabled)
+			  X.style.background = "green";
+		  else X.style.background = "blue";
+	  }, false);
+
+	  //S descriptor
+	  document.getElementById("cover4S").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "The Will is responsible for the right curl (the zone 5-8 yards from the line of scrimmage near the right sideline) and part of the right hook (the zone 5-8 yards from the line of scrimmage just right of middle). He can provide coverage for the Y or Z receiver should they venture in his zone. He can also stop the run if the halfback bounces to the outside.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var Y = document.getElementById("cover4Y");
+		  Y.style.background = "#FFDC00";
+		  var HB = document.getElementById("cover4HB");
+		  HB.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover4S").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var Y = document.getElementById("cover4Y");
+		  Y.style.background = "blue";
+		  var HB = document.getElementById("cover4HB");
+		  HB.style.background = "blue";
+	  }, false);
+
+	  //C2 descriptor
+	  document.getElementById("cover4C2").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "This corner acts as an additional \"sideline\" safety, so he's not really playing off man on the Z receiver. The corner will drop back a few yards to the deep right fourth of the field, but if the Z is on a streak route, the corner will switch to man coverage and cover the Z.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + ((e.pageY - $("#defenderInfo4").height())) + "px";
+	  	  infobox.style.display = "block";
+		  var Z = document.getElementById("cover4Z");
+		  Z.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover4C2").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var Z = document.getElementById("cover4Z");
+		  Z.style.background = "blue";
+	  }, false);
+
+	  //E1 descriptor
+	  document.getElementById("cover4E1").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "This is an edge rusher lined up with the left tackle. He tries to sack the quarterback.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + ((e.pageY - $("#defenderInfo4").height())) + "px";
+	  	  infobox.style.display = "block";
+		  var LT = document.getElementById("cover4LT");
+		  LT.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover4E1").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var LT = document.getElementById("cover4LT");
+		  LT.style.background = "blue";
+	  }, false);
+
+	  //T descriptor
+	  document.getElementById("cover4T").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "This is a defensive tackle who is matched up against the left guard. He tries to sack the quarterback or stuff the run.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var LG = document.getElementById("cover4LG");
+		  LG.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover4T").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var LG = document.getElementById("cover4LG");
+		  LG.style.background = "blue";
+	  }, false);
+
+	  //N descriptor
+	  document.getElementById("cover4N").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "This is a nose tackle. He is often double-teamed by the center and right guard in order to open up a hole for the running back. He will still try to stuff the run or sack the quarterback.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var Ce = document.getElementById("cover4Center");
+		  Ce.style.background = "#FFDC00";
+		  var RG = document.getElementById("cover4RG");
+		  RG.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover4N").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var Ce = document.getElementById("cover4Center");
+		  Ce.style.background = "blue";
+		  var RG = document.getElementById("cover4RG");
+		  RG.style.background = "blue";
+	  }, false);
+
+	  //N descriptor
+	  document.getElementById("cover4E2").addEventListener("mouseenter", (e) => {
+		  e.preventDefault();
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "This is an edge rusher lined up with the right tackle. He tries to sack the quarterback. I've positioned him slightly inside the right tackle since the right guard will be preoccupied with the nose tackle, possibly opening up a weakness for this rusher to exploit.";
+		  infobox.style.position = "absolute";
+	  	  infobox.style.left = "" + e.pageX + "px";
+  		  infobox.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "block";
+		  var RT = document.getElementById("cover4RT");
+		  RT.style.background = "#FFDC00";
+	  }, false);
+	  document.getElementById("cover4E2").addEventListener("mouseleave", (e) => {
+		  var infobox = document.getElementById("defenderInfo4");
+		  infobox.innerHTML = "gabbadeegook";
+	  	  //menu.style.left = "" + e.pageX + "px";
+  		  //menu.style.top = "" + (e.pageY - $("#defenderInfo4").height()) + "px";
+	  	  infobox.style.display = "none";
+		  var RT = document.getElementById("cover4RT");
+		  RT.style.background = "blue";
+	  }, false);
+  </script>
+
+  <!-- Quiz JS -->
+
+  <!-- ****  JavaScript Feature submission **** -->
+  <!-- Parsing form input -->
+
+  <!-- ****  JavaScript Feature submission **** -->
+  <!-- Adding element to the DOM, using JS to edit its class and attributes -->
+  <script defer>
+	  function checkAnswers()
+	  {
+		  var score = 0.0;
+		  if (document.getElementById("q1o1").checked) score++;
+		  if (document.getElementById("q2o4").checked) score++;
+		  if (document.getElementById("q3o1").checked) score++;
+		  if (document.getElementById("q4o1").checked) score++;
+		  var o1 = document.getElementById("q5o1").checked;
+		  var o2 = document.getElementById("q5o2").checked;
+		  var o3 = document.getElementById("q5o3").checked;
+		  var o4 = document.getElementById("q5o4").checked;
+		  var q5score = 0;
+		  if (o1) q5score += 0.5;
+		  if (o2) q5score -= 0.5;
+		  if (o3) q5score += 0.5;
+		  if (o4) q5score -= 0.5;
+		  if (q5score < 0) q5score = 0;
+	  	  score += q5score;
+		  showScore(score);
+	  }
+	  function showScore(score)
+	  {
+		  if (document.body.contains(document.getElementById("myScore"))) document.getElementById("myScore").remove()
+		  var scoreNode = document.createElement("span");
+		  scoreNode.id = "myScore"
+		  if (score > 2.5) scoreNode.classList.add("text-success");
+		  else scoreNode.classList.add("text-danger");
+		  scoreNode.classList.add("font-weight-bold");
+		  scoreNode.innerHTML = "You got: " + score + "/5"
+		  var quiz = document.getElementById("quiz");
+		  quiz.appendChild(scoreNode);
+	  }
+  </script>
+
+
+	
+</body>
+
+</html>
