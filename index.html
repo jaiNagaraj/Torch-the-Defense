@@ -9,6 +9,8 @@
   <!-- Basic Styling -->
   <!-- ****  CSS Feature submission **** -->
   <!-- Created responsive background image for website -->
+  <!-- ****  CSS Feature submission **** -->
+  <!-- Using class-wide style assignment (for coverage divs) -->
   <style>
 	  html, body
 	  {
@@ -78,13 +80,13 @@
 	<div class="container cover py-2" id="coverOne">
 		<!-- ****  HTML Feature submission **** -->
 		<!-- Small element -->
-		<small class="display-4 m-2 text-center" style="color: beige;">Cover One</small>
 		<!-- ****  Typography Feature submission 2/4 **** -->
-		<!-- Yellow (Warning) Text -->
+		<!-- Display Class Text -->
+		<small class="display-4 m-2 text-center" style="color: beige;">Cover One</small>
 		<p id="explain1" class="mx-2 px-1 my-2 text-warning">
 			Cover One, also known as Man Free, is a defensive scheme where one safety is dropped back into coverage while every other defender plays man coverage. <br><br>
 			There is usually an extra defender remaining, who can either blitz or drop back to provide extra protection against slants and other short crossing routes.<br><br>
-			Hover over each of the defenders below to learn more about each position and to highlight the offensive position they deal with:
+			Hover over (or tap on, for mobile users) each of the defenders below to learn more about each position and to highlight the offensive position they deal with:
 		</p>
 
 		<!-- ****  HTML Feature submission **** -->
@@ -192,7 +194,7 @@
 		<p id="explain2" class="mx-2 px-1 my-2 text-warning">
 			Cover Two is more of a "zone" defense: a defense where players are assigned to an area of the field to cover. The safeties will be positioned just outside the hashes about 15 yards back from the line of scrimmage, and they each monitor their area from the middle of the field to their respective sideline. <br><br>
 			The linebackers are tasked with monitoring the part of the field 5-12 yards back from the line of scrimmage in a formation called Tampa 2. They cover three zones among the three of them.<br><br>
-			Hover over each of the defenders below to learn more about each position and their zone:
+			Hover over (or tap on, for mobile users) each of the defenders below to learn more about each position and their zone:
 		</p>
 
 		<hr>
@@ -290,7 +292,7 @@
 		<p id="explain3" class="mx-2 px-1 my-2 text-warning">
 			Cover Three is a zone defense which aims to solve the middle-of-the-field vulnerability that Cover 2 presents. One safety drops back to guard the middle about 15 yards off the line of scrimmage, while this time, the corners play off man coverage and sink back about 12 yards off the line of scrimmage. They guard the sidelines, but if a receiver runs a streak route and passes them, the corners switch to man coverage and follow that receiver.<br><br>
 			The linebackers and strong safety, meanwhile, split the field horizontally into four parts, with each defender being assigned a part to cover. This makes it hard for offenses to run short completion routes over the middle. <br><br>
-			Hover over each of the defenders below to learn more about each position and their zone:
+			Hover over (or tap on, for mobile users) each of the defenders below to learn more about each position and their zone:
 		</p>
 
 		<hr>
@@ -386,10 +388,12 @@
 		<!-- 					*********** COVER FOUR DIV ***********			         -->
 	<div class="container cover py-2" id="coverFour" style="display: none;">
 		<small class="display-4 m-2 text-center" style="color: beige;">Cover Four</small>
+		<!-- ****  Typography Feature submission 4/4 **** -->
+		<!-- Use of <em> element to italicize text -->
 		<p id="explain4" class="mx-2 px-1 my-2 text-warning">
 			Cover Four is a zone defense that completely ruins a pass-happy offense's day. With four deep defenders (two corners on the oustide and two safeties <em>within</em> the hashes) and three linebackers underneath, Cover Four aims to eliminate the deep pass.<br><br>
 			This defense is growing increasingly common in the NFL to counter the increase of pass-attack offenses. You'll also find this defense common during last-minute miracle-drive situations for the offense since the last thing the defense wants to do in that moment is to give up a long-bomb touchdown.<br><br>
-			Hover over each of the defenders below to learn more about each position and their zone:
+			Hover over (or tap on, for mobile users) each of the defenders below to learn more about each position and their zone:
 		</p>
 
 		<hr>
@@ -487,7 +491,9 @@
 		<!-- ****  Bootstrap Feature submission **** -->
 		<!-- Created form with Bootstrap styling -->
 		<form style="margin: 1em;">
-			<p style="color: #F8DE7E">You see two safeties just ouside the hashes with the corners pressed up against your receivers. What coverage is this likely to be?</p>
+			<!-- ****  CSS Feature submission **** -->
+			<!-- Changed text color using RGB hex values -->
+			<p style="color: #F8DE7E">You see two safeties just outside the hashes with the corners pressed up against your receivers. What coverage is this likely to be?</p>
 			<div class="form-check">
 			<input class="form-check-input" type="radio" id="q1o1" name="q1" value="Cover2">
 			<label class="form-check-label text-light" for="q1o1">Cover 2</label><br>
@@ -597,11 +603,11 @@
   <!-- JS -->
 
   <!-- Coverage Management -->
-  <!-- ****  jQuery substitute for CSS Feature submission **** -->
+  <!-- ****  jQuery substitute for HTML Feature submission **** -->
   <!-- Setting display to none via .css() -->
 
   <!-- ****  JavaScript Feature submission **** -->
-  <!-- Use of functions -->
+  <!-- Use of functions (mapped to different buttons) -->
   <script defer>
 	  var onDisplay = 1;
 	  function displayCoverOne()
@@ -746,11 +752,11 @@
 	  }
   </script>
 
-  <!-- ****  jQuery substitute for CSS Feature submission **** -->
+  <!-- ****  jQuery substitute for Bootstrap Feature submission **** -->
   <!-- Animation of "players" via .animate() -->
 	
   <!-- ****  JavaScript Feature submission **** -->
-  <!-- Changing explanatory text to fit the post-play situation -->
+  <!-- Changing explanatory text to fit the post-play situation via .innerHTML -->
   <!-- Cover One JS -->
   <script defer>
 	  //			*************Cover One Progression*************
@@ -877,12 +883,12 @@
 		  document.getElementById("backBtn1").disabled = true;
 		  document.getElementById("nextBtn1").disabled = false;
 		  var explain = document.getElementById("explain1");
-		  explain.innerHTML = "Cover One, also known as Man Free, is a defensive scheme where one safety is dropped back into coverage while every other defender plays man coverage. <br><br> There is usually an extra defender remaining, who can either blitz or drop back to provide extra protection against slants and other short crossing routes.<br><br> Hover over each of the defenders below to learn more about each position and to highlight the offensive position they deal with:";
+		  explain.innerHTML = "Cover One, also known as Man Free, is a defensive scheme where one safety is dropped back into coverage while every other defender plays man coverage. <br><br> There is usually an extra defender remaining, who can either blitz or drop back to provide extra protection against slants and other short crossing routes.<br><br> Hover over (or tap on, for mobile users) each of the defenders below to learn more about each position and to highlight the offensive position they deal with:";
 	  });
   </script>
 
   <!-- ****  JavaScript Feature submission **** -->
-  <!-- Changing appearance and position of div -->
+  <!-- Using .style to edit display property of div -->
   <script defer>
 	  //			*************Cover One Players JS*************
 	  
@@ -1265,7 +1271,7 @@ document.getElementById("cover1SS").addEventListener("mouseenter", (e) => {
 		  document.getElementById("backBtn2").disabled = true;
 		  document.getElementById("nextBtn2").disabled = false;
 		  var explain = document.getElementById("explain2");
-		  explain.innerHTML = "Cover Two is more of a \"zone\" defense: a defense where players are assigned to an area of the field to cover. The safeties will be positioned just outside the hashes about 15 yards back from the line of scrimmage, and they each monitor their area from the middle of the field to their respective sideline. <br><br>The linebackers are tasked with monitoring the part of the field 5-12 yards back from the line of scrimmage in a formation called Tampa 2. They cover three zones among the three of them.<br><br>Hover over each of the defenders below to learn more about each position and their zone:";
+		  explain.innerHTML = "Cover Two is more of a \"zone\" defense: a defense where players are assigned to an area of the field to cover. The safeties will be positioned just outside the hashes about 15 yards back from the line of scrimmage, and they each monitor their area from the middle of the field to their respective sideline. <br><br>The linebackers are tasked with monitoring the part of the field 5-12 yards back from the line of scrimmage in a formation called Tampa 2. They cover three zones among the three of them.<br><br>Hover over (or tap on, for mobile users) each of the defenders below to learn more about each position and their zone:";
 	  });
   </script>
   <script defer>
@@ -1651,7 +1657,7 @@ document.getElementById("cover2SS").addEventListener("mouseenter", (e) => {
 		  document.getElementById("backBtn3").disabled = true;
 		  document.getElementById("nextBtn3").disabled = false;
 		  var explain = document.getElementById("explain3");
-		  explain.innerHTML = "Cover Three is a zone defense which aims to solve the middle-of-the-field vulnerability that Cover 2 presents. One safety drops back to guard the middle about 15 yards off the line of scrimmage, while this time, the corners play off man coverage and sink back about 12 yards off the line of scrimmage. They guard the sidelines, but if a receiver runs a streak route and passes them, the corners switch to man coverage and follow that receiver.<br><br>The linebackers and strong safety, meanwhile, split the field horizontally into four parts, with each defender being assigned a part to cover. This makes it hard for offenses to run short completion routes over the middle. <br><br>Hover over each of the defenders below to learn more about each position and their zone:";
+		  explain.innerHTML = "Cover Three is a zone defense which aims to solve the middle-of-the-field vulnerability that Cover 2 presents. One safety drops back to guard the middle about 15 yards off the line of scrimmage, while this time, the corners play off man coverage and sink back about 12 yards off the line of scrimmage. They guard the sidelines, but if a receiver runs a streak route and passes them, the corners switch to man coverage and follow that receiver.<br><br>The linebackers and strong safety, meanwhile, split the field horizontally into four parts, with each defender being assigned a part to cover. This makes it hard for offenses to run short completion routes over the middle. <br><br>Hover over (or tap on, for mobile users) each of the defenders below to learn more about each position and their zone:";
 	  });
   </script>
   <script defer>
@@ -2052,7 +2058,7 @@ document.getElementById("cover3SS").addEventListener("mouseenter", (e) => {
 		  document.getElementById("backBtn4").disabled = true;
 		  document.getElementById("nextBtn4").disabled = false;
 		  var explain = document.getElementById("explain4");
-		  explain.innerHTML = "Cover Four is a zone defense that completely ruins a pass-happy offense's day. With four deep defenders (two corners and two safeties) and three linebackers underneath, Cover Four aims to eliminate the deep pass.<br><br>This defense is growing increasingly common in the NFL to counter the increase of pass-attack offenses. You'll also find this defense common during last-minute miracle-drive situations for the offense since the last thing the defense wants to do in that moment is to give up a long-bomb touchdown.<br><br>Hover over each of the defenders below to learn more about each position and their zone:";
+		  explain.innerHTML = "Cover Four is a zone defense that completely ruins a pass-happy offense's day. With four deep defenders (two corners and two safeties) and three linebackers underneath, Cover Four aims to eliminate the deep pass.<br><br>This defense is growing increasingly common in the NFL to counter the increase of pass-attack offenses. You'll also find this defense common during last-minute miracle-drive situations for the offense since the last thing the defense wants to do in that moment is to give up a long-bomb touchdown.<br><br>Hover over (or tap on, for mobile users) each of the defenders below to learn more about each position and their zone:";
 	  });
   </script>
   <script defer>
@@ -2314,10 +2320,14 @@ document.getElementById("cover4SS").addEventListener("mouseenter", (e) => {
   <!-- Quiz JS -->
 
   <!-- ****  JavaScript Feature submission **** -->
-  <!-- Parsing form input -->
+  <!-- Parsing form input via accessing radio input attribute "checked" -->
 
   <!-- ****  JavaScript Feature submission **** -->
-  <!-- Adding element to the DOM, using JS to edit its class and attributes -->
+  <!-- Adding element to the DOM via appendChild()); editing its class and attributes -->
+  <!-- Also passing variable as function parameter -->
+
+	<!-- **** HTML Feature submission **** -->
+	<!-- Usage of <span> element to create inline text without excess CSS -->
   <script defer>
 	  function checkAnswers()
 	  {
