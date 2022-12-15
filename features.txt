@@ -1,0 +1,24 @@
+Features:
+1. Background image <-- CSS yes
+2. Responsive containers <-- Bootstrap yes
+3. Button group for tabs <-- Bootstrap yes
+4. Display text on <small> <-- Typography yes
+5. Yellow text on explaining section <-- Typography yes
+6. Horizontal rule for separation <-- HTML yes
+7. Player divs with color backgrounds, bold text, relative widths and position, rounded borders <-- CSS X 2 (relative width is separate from borders) yes
+8. Div with changing text (depending on hovered player) appears on hover with addEventListener <-- JavaScript yes
+9. Use of switch statement to determine which div to turn off <-- JavaScript yes
+10. Button group changes display of coverage with .css() <-- jQuery for HTML yes
+11. Player divs animated movement with jquery on button click <-- jQuery for HTML yes
+12. setTimeout function to change content of explaining text and background of player to green <-- JavaScript yes
+13. Quiz created with Bootstrap formatting <-- BootStrap yes
+14. Function that parses input <-- JavaScript yes
+15. Function that adds span with quiz score to DOM  <-- JavaScript yes
+16. Yellow button that submits form info nah
+17. Using nth-child assignment of CSS rules <-- CSS yes
+18. Outline buttons WITH disabledness <-- Bootstrap yes
+19. T A B L E <-- HTML yes
+20. Font-family <-- Typography yes
+21. Center text <-- Typography yes
+
+plus more that i may have forgotten here but marked on the page

@@ -7,11 +7,10 @@
   <title>Torch the Defense</title>
 
   <!-- Basic Styling -->
-  <!-- ****  CSS Feature submission **** -->
-  <!-- Created responsive background image for website -->
-  <!-- ****  CSS Feature submission **** -->
-  <!-- Using class-wide style assignment (for coverage divs) -->
+  
   <style>
+	  /*<!-- ****  CSS Feature submission **** -->
+ 	  <!-- Created responsive background image for website with url() function -->*/
 	  html, body
 	  {
 	  	height: 100%;
@@ -28,12 +27,65 @@
 		margin: auto;
 		width: 100%;
 	}
-	
+	/*<!-- ****  CSS Feature submission **** -->*/
+    /*<!-- Using class-wide style assignment (for coverage divs) -->*/
 	.cover
 	{
 		width: 80%;
 		margin: auto;
 		background: gray;
+	}
+
+	table, td, th
+	{
+		border: 2px solid black;
+	}
+
+	/*<!-- ****  Typography Feature submission 1/4 **** -->
+	  <!-- Center-aligned text -->*/
+	table
+	{
+		width: 100%;
+		text-align: center;
+	}
+
+	th
+	{
+		background-color: lavender;
+		font-family: sans-serif;
+	}
+
+	/*<!-- ****  CSS Feature submission **** -->*/
+    /*<!-- Using nth-child pseudo class for editing specific column series -->*/
+	th:nth-child(2n-1)
+	{
+		width: 30%;
+	}
+
+	th:nth-child(2n)
+	{
+		width: 70%;
+	}
+
+	/*<!-- ****  Typography Feature submission 2/4 **** -->
+	  <!-- Specified font family to be used (sans-serif fits with Bootstrap fonts) -->*/
+	td
+	{
+		text-align: center;
+		background-color: beige;
+		font-family: sans-serif;
+		padding: 2%;
+	}
+
+	td:nth-child(2n-1)
+	{
+		width: 30%;
+		font-weight: 570;
+	}
+
+	td:nth-child(2n)
+	{
+		width: 70%;
 	}
   </style>
 	
@@ -51,11 +103,10 @@
   <!-- 					*********** HOME DIV ***********			         -->
   <div id="home" class="py-3">
     <div class="container my-3">
-		<!-- ****  HTML Feature submission **** -->
-		<!-- Header element -->
+		<!-- ****  Typography Feature submission 3/4 **** -->
+		<!-- Light Text Color -->
 	    <h1 class="text-center text-light">Torch the Defense!</h1>
-		<!-- ****  Typography Feature submission 1/4 **** -->
-		<!-- Light Text -->
+		
 	    <p class="text-center text-light"">Click on each of the buttons below to learn about basic defensive schemes and their weaknesses.</p>
     </div>
     <!-- ****  Bootstrap Feature submission **** -->
@@ -68,6 +119,7 @@
 	    <button type="button" class="btn btn-secondary" onclick="displayCoverThree()">Cover 3</button>
 	    <button type="button" class="btn btn-secondary" onclick="displayCoverFour()">Cover 4</button>
 		<button type="button" class="btn btn-secondary" onclick="displayQuiz()">Quiz!</button>
+		<button type="button" class="btn btn-secondary" onclick="displayKey()">Key</button>
     </div>
 
 	  <hr>
@@ -78,10 +130,8 @@
 	<!-- ****  Bootstrap Feature submission **** -->
 	<!-- Created responsive container with padding class 2 -->
 	<div class="container cover py-2" id="coverOne">
-		<!-- ****  HTML Feature submission **** -->
-		<!-- Small element -->
-		<!-- ****  Typography Feature submission 2/4 **** -->
-		<!-- Display Class Text -->
+		<!-- ****  Typography Feature submission 4/4 **** -->
+		<!-- Display Class Text using Bootstrap -->
 		<small class="display-4 m-2 text-center" style="color: beige;">Cover One</small>
 		<p id="explain1" class="mx-2 px-1 my-2 text-warning">
 			Cover One, also known as Man Free, is a defensive scheme where one safety is dropped back into coverage while every other defender plays man coverage. <br><br>
@@ -96,7 +146,7 @@
 		<!-- List of positions for Cover One -->	
 		<div style="max-height: 23em">
 			<!-- ****  CSS Feature submission **** -->
-			<!-- Round borders -->
+			<!-- Round borders with border-radius property -->
 			<p id="cover1FS" style="font-weight: bolder; border: 2px solid red; border-radius: 15px; width: 10%; position: relative; left: 40%; background: red;" class="text-center text-light">
 				FS
 			</p>
@@ -482,17 +532,22 @@
 		</div>
 	</div>
 
+
+
+	
+
 		<!-- 					*********** QUIZ DIV ***********			         -->
 	<div class="container cover py-2" id="quiz" style="display: none;">
 		<small class="display-4 m-2 text-center" style="color: beige;">Quiz</small>
-		<p id="explain4" class="mx-2 px-1 my-2 text-warning">
+		<p id="explainQuiz" class="mx-2 px-1 my-2 text-warning">
 			Time to see how much you've learned! There are 5 multiple-choice questions below. Can you get them all right?
 		</p>
+
+		<hr>
+		
 		<!-- ****  Bootstrap Feature submission **** -->
-		<!-- Created form with Bootstrap styling -->
+		<!-- Created form with Bootstrap styling/structure -->
 		<form style="margin: 1em;">
-			<!-- ****  CSS Feature submission **** -->
-			<!-- Changed text color using RGB hex values -->
 			<p style="color: #F8DE7E">You see two safeties just outside the hashes with the corners pressed up against your receivers. What coverage is this likely to be?</p>
 			<div class="form-check">
 			<input class="form-check-input" type="radio" id="q1o1" name="q1" value="Cover2">
@@ -598,24 +653,193 @@
 		
 	</div>
 
+
+
+
+
+			<!-- 					*********** KEY DIV ***********			         -->
+	<div class="container cover py-2" id="key" style="display: none;">
+		<small class="display-4 m-2 text-center" style="color: beige;">Key</small>
+		<p id="explainKey" class="mx-2 px-1 my-2 text-warning">
+			Questions on terminology? This key should cover most terms for newbies.
+		</p>
+
+		<hr>
+		<!-- ****  HTML Feature submission **** -->
+		<!-- Table -->
+		<table>
+			<tr>
+				<th>
+					Term
+				</th>
+				<th>
+					Definition
+				</th>
+			</tr>
+			<tr>
+				<td>
+					QB
+				</td>
+				<td>
+					Quarterback. He takes the snap from the Center (Ce) and aims to pass the ball.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					HB
+				</td>
+				<td>
+					Halfback. He lines up behind the quarterback and either blocks, runs a route, or runs with the football.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					FB
+				</td>
+				<td>
+					Fullback. He lines up behind the quarterback and usually blocks or runs a route, and occasionally runs with the football.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					X
+				</td>
+				<td>
+					The X, or X receiver, is the receiver on the weak side of the ball.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Y
+				</td>
+				<td>
+					The Y, or Y receiver, is the receiver on the strong side of the ball closest to the offensive line.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Z
+				</td>
+				<td>
+					The Z, or Z receiver, is the receiver on the strong side of the ball farthest from the offensive line.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Offensive line
+				</td>
+				<td>
+					The offensive line, or O-Line, is a group of five blockers (left and right tackles, left and right guards, center) that protect the QB from getting hit behind the line of scrimmage. The O-Line always lines up right on the line of scrimmage.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Line of scrimmage
+				</td>
+				<td>
+					The line of scrimmage is the line across the field from which play starts. It is the great dividing line of football: no offensive player can cross it nor defensive player can cross it until the ball is snapped. The Center of the offense squats down, holding the football on the line before the quarterback signals for the ball to be snapped.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					The snap
+				</td>
+				<td>
+					How a football play starts. When the QB signals for the ball, the center throws the ball between his legs from the ground to the QB. At this time, any player may cross the line of scrimmage.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Safety (the defensive position)
+				</td>
+				<td>
+					A defensive player usually positioned one of the farthest away from the line of scrimmage. His role is outlined in more detail in the coverage sections. There are two safety positions: free safety (fast, nimble, and able to guard against a pass) and strong safety (strong, big, and powerful enough to tackle a halfback or be a linebacker).
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Linebacker
+				</td>
+				<td>
+					A defensive player usually positioned a little closer to the line of scrimmage, yet not directyle on the line. They are like swiss-army knives: their uses are numerous. They can stop the run, cover a receiver, blitz the QB, and more! The three presented (Will, Mike, and Sam) are accordingly named based on their position on the field relative to the alignment of the offense: a linebacker on the side of the Y receiver (strong side) is the Sam, the one in the middle is the Mike, and the one on the side opposite the Y reciever (weak side) is the Will. Notice how the first letter of each name is the first letter of the side they're on?
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Defensive Line
+				</td>
+				<td>
+					The defensive line, or D-Line, is a group of 4 players that try to attack the QB by trying to get past the O-Line. The edge rushers are usually the most successful since they have the most open space and have a better angle of attack. 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Cornerback (C)
+				</td>
+				<td>
+					A defensive player lined up near the sidelines, but about the same distance away from the line of scrimmage as the linebackers. They have different roles depending on the coverage used, but they are touted for their skills of covering a wide receiver (going toe-to-toe with the receiver and blocking any pass coming their way). The cornerback position is often called the toughest defensive position in football.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Spy
+				</td>
+				<td>
+					A defensive role usually relegated to a linebacker. This linebacker will keep a constant eye on the quarterback and is responsible for making sure the QB doesn't run past the line of scrimmage.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Blitz
+				</td>
+				<td>
+					A blitz is when a defensive player other than the defensive line rushes at the quarterback in an attempt to sack him. Multiple defenders can blitz, though that leaves less defenders to, well, defend.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Sack
+				</td>
+				<td>
+					When the QB is tackled behind the line of scrimmage.
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Route
+				</td>
+				<td>
+					A path ran by the receiver in order to get away from defenders and become an open target for a pass. There are several types of routes that I mention (streak, dig, etc), so feel free to look up their general shapes in order to get a better understanding of the plays described. 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Hashes/Seams
+				</td>
+				<td>
+					Two rows of short horizontal lines that run up and down the field from endzone to endzone. They are positioned so that the field is roughly split into thirds horizontally.
+				</td>
+			</tr>
+		</table>
+		
+	</div>
 	
 	
   <!-- JS -->
 
-  <!-- Coverage Management -->
-  <!-- ****  jQuery substitute for HTML Feature submission **** -->
-  <!-- Setting display to none via .css() -->
-
-  <!-- ****  JavaScript Feature submission **** -->
-  <!-- Use of functions (mapped to different buttons) -->
+  <!-- Coverage Management -->  
   <script defer>
 	  var onDisplay = 1;
 	  function displayCoverOne()
 	  {
+		  //<!-- ****  JavaScript Feature submission **** -->
+  		  //<!-- Use of switch statement to change div display based on variable -->
 		  switch (onDisplay)
 		  {
 			  case 2:
 				  $("#coverTwo").fadeOut("fast");
+				  //<!-- ****  jQuery substitute for HTML Feature submission **** -->
+  				  //<!-- Setting display to none via .css() -->
 				  $("#coverTwo").css("display","none");
 				  break;
 			  case 3:
@@ -750,10 +974,35 @@
 		  $("#quiz").fadeIn("fast");
 		  onDisplay = 5;
 	  }
+	  function displayKey()
+	  {
+		  switch (onDisplay)
+		  {
+			  case 1:
+				  $("#coverOne").fadeOut("fast");
+				  $("#coverOne").css("display","none");
+				  break;
+			  case 2:
+				  $("#coverTwo").fadeOut("fast");
+				  $("#coverTwo").css("display","none");
+				  break;
+			  case 3:
+				  $("#coverThree").fadeOut("fast");
+				  $("#coverThree").css("display","none");
+				  break;
+			  case 4:
+				  $("#coverFour").fadeOut("fast");
+				  $("#coverFour").css("display","none");
+				  break;
+			  case 5:
+				  $("#quiz").fadeOut("fast");
+				  $("#quiz").css("display","none");
+				  break;
+		  }
+		  $("#key").fadeIn("fast");
+		  onDisplay = 6;
+	  }
   </script>
-
-  <!-- ****  jQuery substitute for Bootstrap Feature submission **** -->
-  <!-- Animation of "players" via .animate() -->
 	
   <!-- ****  JavaScript Feature submission **** -->
   <!-- Changing explanatory text to fit the post-play situation via .innerHTML -->
@@ -761,6 +1010,8 @@
   <script defer>
 	  //			*************Cover One Progression*************
 	  $("#nextBtn1").click(() => {
+		  //<!-- ****  jQuery substitute for HTML Feature submission **** -->
+  		  //<!-- Animation of "players" via .animate() -->
 		  $("#cover1X").animate({
 			  "bottom" : "+=13em"
 		  }, 2000);
@@ -1590,7 +1841,10 @@ document.getElementById("cover2SS").addEventListener("mouseenter", (e) => {
 		  }, 2000);
 		  document.getElementById("backBtn3").disabled = false;
 		  document.getElementById("nextBtn3").disabled = true;
-		  setTimeout(function(){
+		  //<!-- ****  JavaScript Feature submission **** -->
+  		  //<!-- Use of JavaScript's built-in setTimeout function to cause delay -->
+  		  //<!-- This allows the animation to happen, followed by timely DOM change -->
+		  setTimeout(function() {
 			  document.getElementById("cover3Y").style.background = "green";
 			  var explain = document.getElementById("explain3");
 			  explain.innerHTML = "Cover three, however, is weak down the seams (the hashes). Admittedly, this has a fairly tighter window than the other weaknesses, but a fast enought receiver can hit it easily. <br><br>Notice also that, if the free safety does manage to cover the Y receiver, you've got a nice dump-off pass to the X receiver, whose curl route flew under the radar of the Will and the deep left corner. That should net you about 7 yards - perfect for most 3rd down conversions and the like.";
@@ -2063,6 +2317,10 @@ document.getElementById("cover3SS").addEventListener("mouseenter", (e) => {
   </script>
   <script defer>
 	  //			*************Cover Four Players JS*************
+
+	  //<!-- ****  JavaScript Feature submission **** -->
+  	  //<!-- Using addEventListener to call function on hover of element -->
+  	  //<!-- Using event parameter to get data of mouse on page -->
 	  
 	  //FS descriptor
 	  document.getElementById("cover4FS").addEventListener("mouseenter", (e) => {
@@ -2318,17 +2576,9 @@ document.getElementById("cover4SS").addEventListener("mouseenter", (e) => {
   </script>
 
   <!-- Quiz JS -->
-
-  <!-- ****  JavaScript Feature submission **** -->
-  <!-- Parsing form input via accessing radio input attribute "checked" -->
-
-  <!-- ****  JavaScript Feature submission **** -->
-  <!-- Adding element to the DOM via appendChild()); editing its class and attributes -->
-  <!-- Also passing variable as function parameter -->
-
-	<!-- **** HTML Feature submission **** -->
-	<!-- Usage of <span> element to create inline text without excess CSS -->
   <script defer>
+	  //<!-- ****  JavaScript Feature submission **** -->
+  	  //<!-- Parsing form input via accessing radio input attribute "checked" -->
 	  function checkAnswers()
 	  {
 		  var score = 0.0;
@@ -2349,6 +2599,9 @@ document.getElementById("cover4SS").addEventListener("mouseenter", (e) => {
 	  	  score += q5score;
 		  showScore(score);
 	  }
+	  //<!-- ****  JavaScript Feature submission **** -->
+  	  //<!-- Adding element to the DOM via appendChild(); editing its class and attributes -->
+  	  //<!-- Also passing variable as function parameter -->
 	  function showScore(score)
 	  {
 		  if (document.body.contains(document.getElementById("myScore"))) document.getElementById("myScore").remove()
